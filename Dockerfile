@@ -19,7 +19,7 @@ RUN chown -R daemon:daemon tor-browser_en-US
 WORKDIR /
 RUN apt-get -y purge gnupg2 wget xz-utils
 RUN apt-get -y autoremove --purge
-RUN apt-get clean && rm -rf /var/lib/{apt,cache,dpkg,log}
+RUN apt-get clean && rm -rf /var/lib/{apt,cache,dpkg,log} /tmp/*
 
 USER daemon
 
